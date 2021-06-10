@@ -15,8 +15,8 @@ Hostvn.net - Laravel is Docker Images, pre-installed with Nginx, php-fpm and Lar
 ## Quick reference
 
 - Maintained by: <a href="https://hostvn.net">Hostvn.net</a>
-- Docker hub: https://hub.docker.com/r/hostvn/wordpress
-- WordPress: https://laravel.com/
+- Docker hub: https://hub.docker.com/r/hostvn/laravel
+- Laravel: https://laravel.com/
 - Composer: https://getcomposer.org/
 - Supervisor: http://supervisord.org/
 - Nginx Brotli module: https://github.com/google/ngx_brotli
