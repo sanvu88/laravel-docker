@@ -70,5 +70,5 @@ docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web
 ```
 
 ```html
-docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel:8-php8
+docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel:8-php7
 ```
