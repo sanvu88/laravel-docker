@@ -174,8 +174,7 @@ RUN rm -rf /opt/*
 ## Install Composer
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
-RUN wget https://getcomposer.org/download/1.10.22/composer.phar
-RUN mv composer.phar /usr/local/bin/composer1 && chmod +x /usr/local/bin/composer1
+RUN chmod +x /usr/local/bin/composer
 
 ## Download Laravel
 RUN rm -rf /usr/share/nginx/html

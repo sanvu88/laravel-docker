@@ -6,27 +6,65 @@
 
 ## About Hostvn.net WordPress
 
-Hostvn.net WordPress is developed based on the Nginx Docker official, not only inherits the advantages of Nginx Docker official but also helps to customize the configuration and add some modules.
+Hostvn.net - Laravel is Docker Images, pre-installed with Nginx, php-fpm and Laravel, with the best security configurations and optimization for WordPress
 
-<h2>Quick reference</h2>
+## Quick reference
 
 - Maintained by: <a href="https://hostvn.net">Hostvn.net</a>
-- Docker hub:
-- WordPress: https://wordpress.org/
+- Docker hub: https://hub.docker.com/r/hostvn/wordpress
+- WordPress: https://laravel.com/
+- Composer: https://getcomposer.org/
+- Supervisor: http://supervisord.org/
 - Nginx Brotli module: https://github.com/google/ngx_brotli
 - Nginx header more module: https://github.com/openresty/headers-more-nginx-module
 
-<h2>Changes:</h2>
+## Changes:
 
 - Customize <b>/etc/nginx/nginx.conf</b> file configuration more optimally
 - Add module ngx_brotli
 - Add module ngx_headers_more
-- Security configuration file at: <b>/etc/nginx/security.conf</b>
+- Security configuration file at: <b>/etc/nginx/extra/security.conf</b>
+- Block SQL injections, file injections, spam ... at: <b>/etc/nginx/extra/block.conf</b>
+- Config browse cache: <b>/etc/nginx/extra/staticfiles.conf</b>
 - Add the configuration file CloudFlare ip: <b>/etc/nginx/cloudflare.conf</b>
+- Custom PHP Ini: <b>/etc/php/7.4/cli/conf.d/00-hostvn-custom.ini, /etc/php/7.4/fpm/conf.d/00-hostvn-custom.ini</b>
 - Added security header structure
 
-<h2>Using:</h2>
+## PHP Extensions
 
-<code>docker pull hostvn/hostvn.net-nginx</code>
+- ldap
+- zip
+- cli
+- mysql
+- gd
+- xml
+- mbstring
+- soap
+- common
+- curl
+- bcmath
+- snmp
+- pspell
+- gmp
+- intl
+- imap
+- enchant
+- xmlrpc
+- tidy
+- opcache
+- imagick
+- sqlite3
+- json
+- memcached
+- redis
+- igbinary
 
-<code>docker run --name nginx -p 80:80 -p 443:443 --restart always -v ${PWD}/web:/usr/share/nginx/html -d hostvn/hostvn.net-nginx</code>
+## Using:
+
+```html
+docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel8-php7
+```
+
+```html
+docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel8-php8
+```
