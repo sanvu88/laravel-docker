@@ -6,7 +6,11 @@
 
 ## About Hostvn.net WordPress
 
-Hostvn.net - Laravel is Docker Images, pre-installed with Nginx, php-fpm and Laravel, with the best security configurations and optimization for WordPress
+Hostvn.net - Laravel is Docker Images, pre-installed with Nginx, php-fpm and Laravel, with the best security configurations and optimization for Laravel
+
+## Supported tags
+
+- latest, 8-php8, 8-php7, 7-php7, 6-php7
 
 ## Quick reference
 
@@ -62,9 +66,9 @@ Hostvn.net - Laravel is Docker Images, pre-installed with Nginx, php-fpm and Lar
 ## Using:
 
 ```html
-docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel8-php7
+docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel:8-php8
 ```
 
 ```html
-docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel8-php8
+docker run --name webapp -h webapp -p 80:80 -p 443:443 --restart always -v ./web:/usr/share/nginx/html -d hostvn/laravel:8-php8
 ```
